@@ -12,6 +12,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -19,8 +20,8 @@
 			<!-- Header -->
 				<div id="header">
 
-					<!-- Logo -->
-						<h1><a href="index.php" id="logo">Vendas<em>de bicicletas</em></a></h1>
+					<!-- Logo -->						
+						<h1><a href="index.php" id="logo">Vendas <em>de bicicletas</em></a></h1>
 
 					<!-- Nav -->
 						<nav id="nav">
@@ -42,10 +43,25 @@
 
 									</ul>
 								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="two-sidebar.html">Two Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
+								<li><a href="#">Ver Carrinho</a></li>
+								<li><a href="#">Finalizar</a></li>
+								<li>
+									<a href="#">Administração</a>
+									<ul>
+									<?php
+										$sql="select * from menu where bloco='Admin'";
+										$r=mysqli_query($con,$sql);
+										while ($dados=mysqli_fetch_array($r))
+										{
+											echo "<li>";
+											echo "<a href=\"".$dados['url']."\">";
+											echo $dados['titulo'];
+											echo "</a></li>";
+										}
+									?>
+									</ul>
+								</li>
+								<li><a href="#">Login</a></li>
 							</ul>
 						</nav>
 
@@ -54,45 +70,16 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Arcana: <em>A responsive site template freebie by <a href="http://html5up.net">HTML5 UP</a></em></h2>
-						<a href="#" class="button">Learn More</a>
+						<h2>Bicicletaria do Tonhão: <em>Sua magrela no grau <a href="#"></a></em></h2>
+						<a href="#" class="button">Saiba mais</a>
 					</header>
-				</section>
-
-			<!-- Highlights -->
-				<section class="wrapper style1">
-					<div class="container">
-						<div class="row gtr-200">
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-paper-plane"></i>
-									<h3>This Is Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-pencil-alt"></i>
-									<h3>Also Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-							<section class="col-4 col-12-narrower">
-								<div class="box highlight">
-									<i class="icon solid major fa-wrench"></i>
-									<h3>Probably Important</h3>
-									<p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
-								</div>
-							</section>
-						</div>
-					</div>
-				</section>
+				</section>		
 
 			<!-- Gigantic Heading -->
 				<section class="wrapper style2">
 					<div class="container">
 						<header class="major">
-							<h2>A gigantic heading you can use for whatever</h2>
+							<h2>Vendendo a bicicleta de acordo com seu estilo</h2>
 							<p>With a much smaller subtitle hanging out just below it</p>
 						</header>
 					</div>
@@ -233,6 +220,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 	</body>
 </html>

@@ -2014,7 +2014,7 @@ input, select, textarea {
 		background: #fff;
 		border: solid 1px #e0e0e0;
 		border-radius: 5px;
-		color: inherit;
+		color: black;
 		display: block;
 		outline: 0;
 		padding: 0.75em;
@@ -2674,7 +2674,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/banner.png");
 		background-position: center center;
 		background-size: cover;
 		height: 28em;
